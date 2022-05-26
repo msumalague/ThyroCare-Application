@@ -4,10 +4,11 @@ import 'package:thyroidclass/screen/Home/components/background.dart';
 import 'package:thyroidclass/screen/NavigationBar.dart';
 import 'package:thyroidclass/subpage/Bloodwork/Bloodwork.dart';
 import 'package:thyroidclass/subpage/homepage/HomePage.dart';
-import 'package:thyroidclass/subpage/Medicine/MedicinePage.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:tuple/tuple.dart';
 import 'package:thyroidclass/subpage/Symptoms/SymptomsPage.dart';
+
+import '../../../subpage/Medicine/UI/MedicinePage.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);

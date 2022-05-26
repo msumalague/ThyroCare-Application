@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:thyroidclass/screen/UserProfile/ProfilePage.dart';
 import 'package:thyroidclass/screen/Login/LoginScreen.dart';
-import 'package:thyroidclass/screen/Authentication/Auth.dart';
 
 class NavBar extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);

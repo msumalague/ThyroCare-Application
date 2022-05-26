@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:thyroidclass/screen/components/TabButton.dart';
-import 'package:thyroidclass/subpage/Medicine/MedicinePage.dart';
+import '../../../subpage/Medicine/UI/MedicinePage.dart';
 
 class HomeMedicine extends StatelessWidget {
   @override

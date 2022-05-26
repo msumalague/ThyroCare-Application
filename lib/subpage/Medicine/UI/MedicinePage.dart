@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:thyroidclass/screen/components/TabButton.dart';
-import 'package:thyroidclass/subpage/Medicine/MedicineReminder.dart';
+import 'package:thyroidclass/subpage/Medicine/UI/MedicineReminder.dart';
 
 class MedicinePage extends StatelessWidget {
   @override
@@ -75,7 +75,7 @@ class MedicinePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => MyMedicineRemainder(),
+                        builder: (context) => MedicineReminder(),
                       ));
                 },
                 child: TabButton(

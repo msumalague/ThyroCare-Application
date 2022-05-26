@@ -54,6 +54,11 @@ dependencies:
   moor_flutter: ^2.0.0
   simple_animations: ^4.0.2
   fluttertoast: ^8.0.9
+  provider: ^6.0.3
+  shared_preferences: ^2.0.15
+  rxdart: ^0.27.3
+  flare_flutter: ^3.0.2
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -104,6 +109,7 @@ flutter:
      - assets/images/pill.png
      - assets/images/syringe.png
      - assets/images/ointment.png
+     - assets/animations/Success Check.flr
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -130,5 +136,9 @@ flutter:
     - family: Urbanist
       fonts:
       - asset: assets/fonts/Urbanist-Regular.ttf
+
+    - family: Ic
+      fonts:
+      - asset: assets/fonts/ic_medicine.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
