@@ -24,12 +24,12 @@ class Medicine {
 
   Map<String, dynamic> toJson() {
     return {
-      "ids": notificationIDs,
-      "name": medicineName,
-      "dosage": dosage,
-      "type": medicineType,
-      "interval": interval,
-      "start": startTime,
+      "ids": this.notificationIDs,
+      "name": this.medicineName,
+      "dosage": this.dosage,
+      "type": this.medicineType,
+      "interval": this.interval,
+      "start": this.startTime,
     };
   }
 

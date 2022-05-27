@@ -25,7 +25,7 @@ class MedicineDetails extends StatelessWidget {
         ),
         centerTitle: true,
         title: Text(
-          "Medicine Details",
+          "MEDICINE DETAILS",
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
@@ -66,6 +66,7 @@ class MedicineDetails extends StatelessWidget {
                           color: Colors.white,
                           fontSize: 22,
                           fontWeight: FontWeight.w700,
+                          fontFamily: 'Urbanist',
                         ),
                       ),
                     ),
@@ -151,7 +152,7 @@ class MedicineDetails extends StatelessWidget {
                             width: MediaQuery.of(context).size.width / 2.743,
                             padding: EdgeInsets.only(top: 15.0, bottom: 15.0),
                             decoration: BoxDecoration(
-                              color: Colors.red[700],
+                              color: Colors.red[400],
                               borderRadius: BorderRadius.only(
                                   bottomRight: Radius.circular(30.0)),
                             ),
@@ -296,7 +297,7 @@ class MainInfoTab extends StatelessWidget {
             fieldInfo,
             style: TextStyle(
                 fontSize: 24,
-                color: Color(0xFF3EB16F),
+                color: Color(0xFF1CC8A5),
                 fontWeight: FontWeight.bold),
           ),
         ],

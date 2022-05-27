@@ -26,7 +26,6 @@ class _NewEntryState extends State<NewEntry> {
 
   GlobalKey<ScaffoldState>? _scaffoldKey;
 
-  @override
   void dispose() {
     super.dispose();
     nameController?.dispose();
@@ -60,7 +59,7 @@ class _NewEntryState extends State<NewEntry> {
         ),
         centerTitle: true,
         title: Text(
-          "Add New Medicine Reminder",
+          "ADD NEW MEDICINE REMINDER",
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
@@ -81,7 +80,7 @@ class _NewEntryState extends State<NewEntry> {
                 isRequired: true,
               ),
               TextFormField(
-                maxLength: 20,
+                maxLength: 12,
                 style: TextStyle(
                   fontSize: 16,
                 ),
@@ -182,11 +181,12 @@ class _NewEntryState extends State<NewEntry> {
                     shape: StadiumBorder(),
                     child: Center(
                       child: Text(
-                        "Confirm",
+                        "CONFIRM",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 28,
                           fontWeight: FontWeight.w700,
+                          fontFamily: 'Urbanist',
                         ),
                       ),
                     ),
@@ -236,7 +236,7 @@ class _NewEntryState extends State<NewEntry> {
                           makeIDs(24 / _newEntryBloc!.selectedInterval$.value);
                       List<String> notificationIDs = intIDs
                           .map((i) => i.toString())
-                          .toList(); //for Shared preferencer Shared preference
+                          .toList(); //for Shared preference
 
                       Medicine newEntryMedicine = Medicine(
                         notificationIDs: notificationIDs,
@@ -297,7 +297,7 @@ class _NewEntryState extends State<NewEntry> {
   void displayError(String error) {
     _scaffoldKey!.currentState?.showSnackBar(
       SnackBar(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.redAccent,
         content: Text(error),
         duration: Duration(milliseconds: 2000),
       ),
@@ -315,12 +315,11 @@ class _NewEntryState extends State<NewEntry> {
 
   initializeNotifications() async {
     var initializationSettingsAndroid =
-        AndroidInitializationSettings('@mipmap/ic_launcher');
+        AndroidInitializationSettings('@mipmap/launcher_icon');
     var initializationSettingsIOS = IOSInitializationSettings();
     var initializationSettings = InitializationSettings(
         android: initializationSettingsAndroid, iOS: initializationSettingsIOS);
-    var flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
-    await flutterLocalNotificationsPlugin.initialize(initializationSettings,
+    await flutterLocalNotificationsPlugin?.initialize(initializationSettings,
         onSelectNotification: onSelectNotification);
   }
 
@@ -343,7 +342,7 @@ class _NewEntryState extends State<NewEntry> {
       'repeatDailyAtTime channel id',
       'repeatDailyAtTime channel name',
       importance: Importance.max,
-      ledColor: Colors.teal,
+      ledColor: Color(0xFF1CC8A5),
       ledOffMs: 1000,
       ledOnMs: 1000,
       enableLights: true,
@@ -361,7 +360,7 @@ class _NewEntryState extends State<NewEntry> {
       }
       await flutterLocalNotificationsPlugin?.showDailyAtTime(
           int.parse(medicine.notificationIDs[i]),
-          'Mediminder: ${medicine.medicineName}',
+          'Medicine Reminder: ${medicine.medicineName}',
           medicine.medicineType.toString() != MedicineType.None.toString()
               ? 'It is time to take your ${medicine.medicineType.toLowerCase()}, according to schedule'
               : 'It is time to take your medicine, according to schedule',
@@ -495,12 +494,13 @@ class _SelectTimeState extends State<SelectTime> {
           child: Center(
             child: Text(
               _clicked == false
-                  ? "Pick Time"
+                  ? "PICK TIME"
                   : "${convertTime(_time.hour.toString())}:${convertTime(_time.minute.toString())}",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 20,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Urbanist',
               ),
             ),
           ),
