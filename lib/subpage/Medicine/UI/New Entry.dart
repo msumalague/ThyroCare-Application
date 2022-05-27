@@ -26,6 +26,7 @@ class _NewEntryState extends State<NewEntry> {
 
   GlobalKey<ScaffoldState>? _scaffoldKey;
 
+  @override
   void dispose() {
     super.dispose();
     nameController?.dispose();
@@ -47,6 +48,7 @@ class _NewEntryState extends State<NewEntry> {
   @override
   Widget build(BuildContext context) {
     final GlobalBloc _globalBloc = Provider.of<GlobalBloc>(context);
+
     return Scaffold(
       key: _scaffoldKey,
       resizeToAvoidBottomInset: false,
@@ -115,6 +117,7 @@ class _NewEntryState extends State<NewEntry> {
               Padding(
                 padding: EdgeInsets.only(top: 10.0),
                 child: StreamBuilder<MedicineType>(
+                  stream: _newEntryBloc?.selectedMedicineType,
                   builder: (context, snapshot) {
                     return Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,

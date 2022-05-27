@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:thyroidclass/subpage/Medicine/UI/convert_time.dart';
 import 'package:thyroidclass/subpage/Medicine/global_bloc.dart';
 import 'package:thyroidclass/subpage/Medicine/models/errors.dart';
@@ -11,7 +12,8 @@ import '../models/medicine_type.dart';
 
 class NewEntryBloc {
   late BehaviorSubject<MedicineType> _selectedMedicineType$;
-  ValueStream get selectedMedicineType => _selectedMedicineType$.stream;
+  ValueStream<MedicineType> get selectedMedicineType =>
+      _selectedMedicineType$.stream;
 
   // BehaviorSubject<List<Day>> _checkedDays$;
   // BehaviorSubject<List<Day>> get checkedDays$ => _checkedDays$;
