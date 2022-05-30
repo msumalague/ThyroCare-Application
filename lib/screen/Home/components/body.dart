@@ -23,7 +23,7 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 4, vsync: this);
+    _tabController = TabController(length: 3, vsync: this);
     _tabController.addListener(() => setState(() {}));
   }
 
@@ -35,7 +35,7 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) => DefaultTabController(
-      length: 4,
+      length: 3,
       child: Scaffold(
           drawer: NavBar(),
           appBar: AppBar(
@@ -69,7 +69,6 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
                 Tab(icon: Icon(Icons.home), text: 'Home'),
                 Tab(icon: Icon(Icons.local_hospital), text: 'Medicine'),
                 Tab(icon: Icon(Icons.bloodtype), text: 'Bloodwork'),
-                Tab(icon: Icon(Icons.find_in_page), text: 'Symptoms'),
               ],
             ),
             elevation: 20,
@@ -79,6 +78,5 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
             HomePage(),
             MedicinePage(),
             Bloodwork(),
-            SymptomsPage(),
           ])));
 }
