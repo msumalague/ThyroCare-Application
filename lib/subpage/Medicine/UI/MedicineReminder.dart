@@ -121,7 +121,7 @@ class TopContainer extends StatelessWidget {
             child: Text(
               "Medicine Reminder",
               style: TextStyle(
-                fontFamily: "Urbanist",
+                fontFamily: "Pacifico",
                 fontSize: 44,
                 color: Colors.white,
               ),
@@ -137,6 +137,7 @@ class TopContainer extends StatelessWidget {
                 "Number of Medicine Reminders",
                 style: TextStyle(
                   fontSize: 18,
+                  fontFamily: "Urbanist",
                   color: Colors.white,
                 ),
               ),
@@ -151,8 +152,8 @@ class TopContainer extends StatelessWidget {
                   child: Text(
                     !snapshot.hasData ? '0' : snapshot.data!.length.toString(),
                     style: TextStyle(
-                      fontFamily: "Neu",
-                      fontSize: 28,
+                      fontFamily: "Urbanist",
+                      fontSize: 24,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),

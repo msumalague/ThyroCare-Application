@@ -25,10 +25,11 @@ class MedicineDetails extends StatelessWidget {
         ),
         centerTitle: true,
         title: Text(
-          "MEDICINE DETAILS",
+          "Medicine Details",
           style: TextStyle(
-            color: Colors.black,
-            fontSize: 18,
+            fontFamily: "Pacifico",
+            color: Colors.black87,
+            fontSize: 24,
           ),
         ),
         elevation: 0.0,

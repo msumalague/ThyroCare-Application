@@ -76,16 +76,16 @@ class TopContainer extends StatelessWidget {
               bottom: 5,
             ),
             child: Text(
-              "BLOOD TEST",
+              "Blood Test",
               style: TextStyle(
-                fontFamily: "Urbanist",
-                fontSize: 40,
+                fontFamily: "Pacifico",
+                fontSize: 35,
                 color: Colors.white,
               ),
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 12.0, left: 10, right: 10),
+            padding: EdgeInsets.only(left: 10, right: 10),
             child: Center(
               child: Text(
                 "This section will help you to determine whether you have hypothyroidism, hyperthyroidism, or euthyroidism. "
