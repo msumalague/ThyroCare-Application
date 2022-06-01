@@ -4,9 +4,6 @@ import 'package:thyroidclass/screen/Home/components/background.dart';
 import 'package:thyroidclass/screen/NavigationBar.dart';
 import 'package:thyroidclass/subpage/Bloodwork/Bloodwork.dart';
 import 'package:thyroidclass/subpage/homepage/HomePage.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:tuple/tuple.dart';
-import 'package:thyroidclass/subpage/Symptoms/SymptomsPage.dart';
 
 import '../../../subpage/Medicine/UI/MedicinePage.dart';
 
@@ -68,7 +65,7 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
               tabs: [
                 Tab(icon: Icon(Icons.home), text: 'Home'),
                 Tab(icon: Icon(Icons.local_hospital), text: 'Medicine'),
-                Tab(icon: Icon(Icons.bloodtype), text: 'Bloodwork'),
+                Tab(icon: Icon(Icons.bloodtype), text: 'Blood Test'),
               ],
             ),
             elevation: 20,

@@ -20,7 +20,7 @@ class Bloodwork extends StatelessWidget {
                 margin: const EdgeInsets.only(left: 20, top: 20, right: 20),
                 child: new Column(children: <Widget>[
                   Text(
-                    'Bloodwork',
+                    'Blood Test',
                     style: TextStyle(
                         fontFamily: 'Urbanist',
                         fontSize: 20,
@@ -38,7 +38,7 @@ class Bloodwork extends StatelessWidget {
                 ),
                 SizedBox(width: 10),
                 Text(
-                  'Save all bloodwork in one location for quick and \neasy access.',
+                  'Save all blood test in one location for quick and \neasy access.',
                   style: TextStyle(
                       fontFamily: 'Urbanist',
                       fontSize: 14,
@@ -53,13 +53,13 @@ class Bloodwork extends StatelessWidget {
               margin: const EdgeInsets.only(left: 25, top: 25, right: 25),
               child: new Row(children: [
                 Icon(
-                  Icons.notifications_active,
+                  Icons.health_and_safety,
                   color: Colors.teal,
                   size: 38,
                 ),
                 SizedBox(width: 10),
                 Text(
-                  'Convert value units for TSH, FT3, FT4, The, and \nAnti-TG from different lab reports onto a single \nscale for easy comparison.',
+                  'This will guide you in determining whether you \n are hypothyroid, hyperthyroid, or euthyroid. ',
                   style: TextStyle(
                       fontFamily: 'Urbanist',
                       fontSize: 14,

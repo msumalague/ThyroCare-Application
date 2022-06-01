@@ -58,6 +58,8 @@ dependencies:
   shared_preferences: ^2.0.15
   rxdart: ^0.27.3
   flare_flutter: ^3.0.2
+  http: ^0.13.4
+  rflutter_alert: ^2.0.4
 
 
 
