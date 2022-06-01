@@ -16,6 +16,8 @@ import 'package:thyroidclass/subpage/Medicine/UI/SuccessScreen.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
+import 'Result.dart';
+
 class BloodworkForm extends StatefulWidget {
   @override
   _BloodworkFormState createState() => _BloodworkFormState();
@@ -185,10 +187,8 @@ class _BottomContainerState extends State<BottomContainer> {
                   SizedBox(
                     height: 40.0,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      MaterialButton(
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                    MaterialButton(
                         shape: RoundedRectangleBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(16.0))),
@@ -196,26 +196,26 @@ class _BottomContainerState extends State<BottomContainer> {
                         color: Color(0xFF1CC8A5),
                         height: MediaQuery.of(context).size.height * 0.07,
                         onPressed: () async {
-    {
-    if (validform()) {
-    Navigator.pushReplacement(
-    context,
-    MaterialPageRoute(
-    builder: (context) => Result(
-    T3: T3,
-    T4: T4U,
-    )));
-    } else {
-    Alert(
-    context: context,
-    title: 'All fields are required',
-    buttons: [],
-    style: AlertStyle(
-    backgroundColor: Colors.cyan))
-        .show();
-    }
-    }
-
+                          {
+                            if (validform()) {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Result(
+                                            T3: T3,
+                                            T4: T4U,
+                                          )));
+                            } else {
+                              Alert(
+                                      context: context,
+                                      title: 'All fields are required',
+                                      buttons: [],
+                                      style: AlertStyle(
+                                          backgroundColor: Colors.cyan))
+                                  .show();
+                            }
+                          }
+                        },
                         child: Container(
                           height: MediaQuery.of(context).size.height * 0.07,
                           width: MediaQuery.of(context).size.height * 0.22,
@@ -225,10 +225,8 @@ class _BottomContainerState extends State<BottomContainer> {
                                   color: Colors.white,
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold)),
-                        ),
-                      )
-                    ],
-                  ),
+                        ))
+                  ])
                 ]),
               )
             ])))));
