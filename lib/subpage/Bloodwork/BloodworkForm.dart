@@ -185,6 +185,62 @@ class _BottomContainerState extends State<BottomContainer> {
                     },
                   ),
                   SizedBox(
+                    height: 20.0,
+                  ),
+                  PanelTitle(
+                    title: "Add T3",
+                    isRequired: true,
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  TextField(
+                    decoration: const InputDecoration(
+                        labelText: 'Enter the value of T3',
+                        border: OutlineInputBorder(),
+                        errorBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(color: Colors.red, width: 5))),
+                    onChanged: (value) {
+                      if (value != null) {
+                        setState(() {
+                          T3 = double.parse(value);
+                        });
+                      }
+                    },
+                    onSubmitted: (value) {
+                      FocusScope.of(context).nextFocus();
+                    },
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  PanelTitle(
+                    title: "Add T3",
+                    isRequired: true,
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  TextField(
+                    decoration: const InputDecoration(
+                        labelText: 'Enter the value of T3',
+                        border: OutlineInputBorder(),
+                        errorBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(color: Colors.red, width: 5))),
+                    onChanged: (value) {
+                      if (value != null) {
+                        setState(() {
+                          T3 = double.parse(value);
+                        });
+                      }
+                    },
+                    onSubmitted: (value) {
+                      FocusScope.of(context).nextFocus();
+                    },
+                  ),
+                  SizedBox(
                     height: 40.0,
                   ),
                   Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -245,7 +301,7 @@ class PanelTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(right: 260),
+      padding: EdgeInsets.only(right: 240),
       child: Text.rich(
         TextSpan(children: <TextSpan>[
           TextSpan(

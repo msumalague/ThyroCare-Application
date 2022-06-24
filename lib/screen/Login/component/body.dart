@@ -166,7 +166,7 @@ class _BodyState extends State<Body> {
                                     )
                                   ],
                                 ),
-                                SizedBox(height: size.height * 0.10),
+                                SizedBox(height: size.height * 0.05),
                                 Container(
                                     margin: EdgeInsets.fromLTRB(10, 0, 10, 50),
                                     //child: Text('Don\'t have an account? Create'),

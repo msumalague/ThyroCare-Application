@@ -29,7 +29,7 @@ class MedicinePage extends StatelessWidget {
                   ),
                 ])),
             Container(
-              margin: const EdgeInsets.only(left: 25, top: 25, right: 25),
+              margin: const EdgeInsets.only(left: 25, top: 25, right: 0),
               child: new Row(children: [
                 Icon(
                   Icons.calendar_month,
@@ -59,7 +59,7 @@ class MedicinePage extends StatelessWidget {
                 ),
                 SizedBox(width: 10),
                 Text(
-                  'Never forget to take your medication. Set up and \nreceive reminders on a timely manner.',
+                  'Never forget to take your medication. Set up \n and receive reminders on a timely manner.',
                   style: TextStyle(
                       fontFamily: 'Urbanist',
                       fontSize: 14,
