@@ -5,15 +5,6 @@ import 'package:http/http.dart';
 import 'package:path/path.dart' as Path;
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:thyroidclass/subpage/Medicine/UI/MedicineReminder.dart';
-import 'package:thyroidclass/subpage/Medicine/UI/New%20Entry.dart';
-import 'package:thyroidclass/subpage/Medicine/UI/convert_time.dart';
-import 'package:thyroidclass/subpage/Medicine/global_bloc.dart';
-import 'package:thyroidclass/subpage/Medicine/models/errors.dart';
-import 'package:thyroidclass/subpage/Medicine/models/medicine.dart';
-import 'package:thyroidclass/subpage/Medicine/UI/new_entry_bloc.dart';
-import 'package:thyroidclass/subpage/Medicine/UI/SuccessScreen.dart';
-import 'package:provider/provider.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 import 'Result.dart';
@@ -109,9 +100,13 @@ class BottomContainer extends StatefulWidget {
 }
 
 class _BottomContainerState extends State<BottomContainer> {
-  late num T3, T4U;
+  late num TSH, T3, TT4, T4U, FTI;
   validform() {
-    if (T3 != null && T4U != null) {
+    if (TSH != null &&
+        T3 != null &&
+        TT4 != null &&
+        T4U != null &&
+        FTI != null) {
       return true;
     } else {
       return false;
@@ -132,6 +127,34 @@ class _BottomContainerState extends State<BottomContainer> {
                 alignment: Alignment.topLeft,
                 child: new Column(children: <Widget>[
                   PanelTitle(
+                    title: "Add TSH",
+                    isRequired: true,
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  TextField(
+                    decoration: const InputDecoration(
+                        labelText: 'Enter the value of TSH',
+                        border: OutlineInputBorder(),
+                        errorBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(color: Colors.red, width: 5))),
+                    onChanged: (value) {
+                      if (value != null) {
+                        setState(() {
+                          TSH = double.parse(value);
+                        });
+                      }
+                    },
+                    onSubmitted: (value) {
+                      FocusScope.of(context).nextFocus();
+                    },
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  PanelTitle(
                     title: "Add T3",
                     isRequired: true,
                   ),
@@ -149,6 +172,34 @@ class _BottomContainerState extends State<BottomContainer> {
                       if (value != null) {
                         setState(() {
                           T3 = double.parse(value);
+                        });
+                      }
+                    },
+                    onSubmitted: (value) {
+                      FocusScope.of(context).nextFocus();
+                    },
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  PanelTitle(
+                    title: "Add TT4",
+                    isRequired: true,
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  TextField(
+                    decoration: const InputDecoration(
+                        labelText: 'Enter the value of TT4',
+                        border: OutlineInputBorder(),
+                        errorBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(color: Colors.red, width: 5))),
+                    onChanged: (value) {
+                      if (value != null) {
+                        setState(() {
+                          TT4 = double.parse(value);
                         });
                       }
                     },
@@ -188,7 +239,7 @@ class _BottomContainerState extends State<BottomContainer> {
                     height: 20.0,
                   ),
                   PanelTitle(
-                    title: "Add T3",
+                    title: "Add FTI",
                     isRequired: true,
                   ),
                   SizedBox(
@@ -196,7 +247,7 @@ class _BottomContainerState extends State<BottomContainer> {
                   ),
                   TextField(
                     decoration: const InputDecoration(
-                        labelText: 'Enter the value of T3',
+                        labelText: 'Enter the value of FTI',
                         border: OutlineInputBorder(),
                         errorBorder: OutlineInputBorder(
                             borderSide:
@@ -204,35 +255,7 @@ class _BottomContainerState extends State<BottomContainer> {
                     onChanged: (value) {
                       if (value != null) {
                         setState(() {
-                          T3 = double.parse(value);
-                        });
-                      }
-                    },
-                    onSubmitted: (value) {
-                      FocusScope.of(context).nextFocus();
-                    },
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  PanelTitle(
-                    title: "Add T3",
-                    isRequired: true,
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  TextField(
-                    decoration: const InputDecoration(
-                        labelText: 'Enter the value of T3',
-                        border: OutlineInputBorder(),
-                        errorBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.red, width: 5))),
-                    onChanged: (value) {
-                      if (value != null) {
-                        setState(() {
-                          T3 = double.parse(value);
+                          FTI = double.parse(value);
                         });
                       }
                     },
@@ -258,8 +281,11 @@ class _BottomContainerState extends State<BottomContainer> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => Result(
+                                            TSH: TSH,
                                             T3: T3,
-                                            T4: T4U,
+                                            TT4: TT4,
+                                            T4U: T4U,
+                                            FTI: FTI,
                                           )));
                             } else {
                               Alert(
@@ -282,7 +308,10 @@ class _BottomContainerState extends State<BottomContainer> {
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold)),
                         ))
-                  ])
+                  ]),
+                  SizedBox(
+                    height: 40.0,
+                  ),
                 ]),
               )
             ])))));
