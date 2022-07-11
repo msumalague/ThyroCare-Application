@@ -16,7 +16,7 @@ class Result extends StatefulWidget {
 }
 
 class _HomeState extends State<Result> {
-  late int prediction;
+  int? classes;
 
   Future<void> predict() async {
     try {
@@ -24,7 +24,7 @@ class _HomeState extends State<Result> {
           'https://https://thyrocarethesis.herokuapp.com/predict/?TSH=${widget.TSH}&T3=${widget.T3}&TT4=${widget.TT4}&T4U=${widget.T4U}&FTI=${widget.FTI}';
       Response data = await get(Uri.parse(url));
       setState(() {
-        prediction = jsonDecode(data.body)['prediction'];
+        classes = jsonDecode(data.body)['classes'];
       });
     } on FirebaseAuthException catch (e) {
       Alert(
@@ -45,7 +45,7 @@ class _HomeState extends State<Result> {
 
   @override
   Widget build(BuildContext context) {
-    if (prediction == null) {
+    if (classes == null) {
       return Loading();
     } else {
       return Scaffold(
@@ -79,7 +79,7 @@ class _HomeState extends State<Result> {
                 children: [
                   Center(
                     child: Text(
-                      'Prediction using Linear Regresion',
+                      'Prediction using Random Forest Classifier',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.orangeAccent,
@@ -92,20 +92,7 @@ class _HomeState extends State<Result> {
                   ),
                   Center(
                     child: Text(
-                      'Predicted Price acoording to the Details',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Center(
-                    child: Text(
-                      'Rs. $prediction',
+                      'Rs. $classes',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.white,
@@ -126,7 +113,7 @@ class _HomeState extends State<Result> {
                         ),
                         borderRadius: BorderRadius.circular(15)),
                     child: Text(
-                      'Predict Another House Price',
+                      'Predict Another Thyroid Disease',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontSize: 20,

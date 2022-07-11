@@ -115,6 +115,7 @@ flutter:
      - assets/images/pill.png
      - assets/images/syringe.png
      - assets/images/ointment.png
+     - assets/images/loading.jpg
      - assets/animations/Success Check.flr
 
   # An image asset can refer to one or more resolution-specific "variants", see

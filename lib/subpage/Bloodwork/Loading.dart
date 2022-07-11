@@ -17,7 +17,7 @@ class _LoadingState extends State<Loading> {
           padding: EdgeInsets.all(10),
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/bloodworkbanner.png'),
+              image: AssetImage('assets/images/loading.jpg'),
               fit: BoxFit.fill,
             ),
           ),
