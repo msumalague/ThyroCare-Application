@@ -11,11 +11,10 @@ class Result extends StatefulWidget {
   Result({this.TSH, this.T3, this.TT4, this.T4U, this.FTI});
 
   @override
-  @override
-  _HomeState createState() => _HomeState();
+  _BloodworkFormState createState() => _BloodworkFormState();
 }
 
-class _HomeState extends State<Result> {
+class _BloodworkFormState extends State<Result> {
   int? classes;
 
   Future<void> predict() async {

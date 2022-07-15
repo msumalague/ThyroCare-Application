@@ -166,7 +166,7 @@ class _NewEntryState extends State<NewEntry> {
               ),
               SelectTime(),
               SizedBox(
-                height: 35,
+                height: 25,
               ),
               Padding(
                 padding: EdgeInsets.only(
@@ -184,9 +184,9 @@ class _NewEntryState extends State<NewEntry> {
                         "CONFIRM",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 28,
+                          fontSize: 24,
                           fontWeight: FontWeight.w700,
-                          fontFamily: 'Urbanist',
+                          //fontFamily: 'Urbanist',
                         ),
                       ),
                     ),
@@ -500,7 +500,7 @@ class _SelectTimeState extends State<SelectTime> {
                 color: Colors.white,
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                fontFamily: 'Urbanist',
+                //fontFamily: 'Urbanist',
               ),
             ),
           ),

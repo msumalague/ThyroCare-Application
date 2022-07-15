@@ -22,18 +22,10 @@ class HomeMedicine extends StatelessWidget {
                     height: 5.0,
                   ),
                   Text(
-                    'No medicines today',
-                    style: TextStyle(
-                        fontFamily: 'Urbanist',
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                  Text(
                     'Add your medications and supplements to receive smart reminders!',
                     style: TextStyle(
                         fontFamily: 'Urbanist',
-                        fontSize: 15,
+                        fontSize: 16,
                         color: Colors.black87),
                     textAlign: TextAlign.center,
                   ),

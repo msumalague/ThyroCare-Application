@@ -134,6 +134,7 @@ class _BottomContainerState extends State<BottomContainer> {
                     height: 20.0,
                   ),
                   TextField(
+                    keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
                         labelText: 'Enter the value of TSH',
                         border: OutlineInputBorder(),
@@ -162,6 +163,7 @@ class _BottomContainerState extends State<BottomContainer> {
                     height: 20.0,
                   ),
                   TextField(
+                    keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
                         labelText: 'Enter the value of T3',
                         border: OutlineInputBorder(),
@@ -190,6 +192,7 @@ class _BottomContainerState extends State<BottomContainer> {
                     height: 20.0,
                   ),
                   TextField(
+                    keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
                         labelText: 'Enter the value of TT4',
                         border: OutlineInputBorder(),
@@ -218,6 +221,7 @@ class _BottomContainerState extends State<BottomContainer> {
                     height: 20.0,
                   ),
                   TextField(
+                    keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
                         labelText: 'Enter the value of T4U',
                         border: OutlineInputBorder(),
@@ -246,6 +250,7 @@ class _BottomContainerState extends State<BottomContainer> {
                     height: 20.0,
                   ),
                   TextField(
+                    keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
                         labelText: 'Enter the value of FTI',
                         border: OutlineInputBorder(),
