@@ -15,15 +15,15 @@ class Result extends StatefulWidget {
 }
 
 class _BloodworkFormState extends State<Result> {
-  int? classes;
+  int? result;
 
   Future<void> predict() async {
     try {
       String url =
-          'https://https://thyrocarethesis.herokuapp.com/predict/?TSH=${widget.TSH}&T3=${widget.T3}&TT4=${widget.TT4}&T4U=${widget.T4U}&FTI=${widget.FTI}';
-      Response data = await get(Uri.parse(url));
+          'https://https://thyrocarethesis.herokuapp.com/predict?TSH=${widget.TSH}&T3=${widget.T3}&TT4=${widget.TT4}&T4U=${widget.T4U}&FTI=${widget.FTI}';
+      Response input_query = await get(Uri.parse(url));
       setState(() {
-        classes = jsonDecode(data.body)['classes'];
+        result = jsonDecode(input_query.body)['classes'];
       });
     } on FirebaseAuthException catch (e) {
       Alert(
@@ -44,7 +44,7 @@ class _BloodworkFormState extends State<Result> {
 
   @override
   Widget build(BuildContext context) {
-    if (classes == null) {
+    if (result == null) {
       return Loading();
     } else {
       return Scaffold(
@@ -91,7 +91,7 @@ class _BloodworkFormState extends State<Result> {
                   ),
                   Center(
                     child: Text(
-                      'Rs. $classes',
+                      'Rs. $result',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.white,
