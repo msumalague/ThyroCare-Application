@@ -125,7 +125,7 @@ class _BottomContainerState extends State<BottomContainer> {
                     child: Column(children: <Widget>[
               Container(
                 alignment: Alignment.topLeft,
-                child: new Column(children: <Widget>[
+                child: Column(children: <Widget>[
                   PanelTitle(
                     title: "Add TSH",
                     isRequired: true,
@@ -294,12 +294,12 @@ class _BottomContainerState extends State<BottomContainer> {
                                           )));
                             } else {
                               Alert(
-                                      context: context,
-                                      title: 'All fields are required',
-                                      buttons: [],
-                                      style: AlertStyle(
-                                          backgroundColor: Colors.cyan))
-                                  .show();
+                                  context: context,
+                                  title: 'All fields are required',
+                                  buttons: [],
+                                  style: AlertStyle(
+                                    backgroundColor: Colors.white,
+                                  )).show();
                             }
                           }
                         },
