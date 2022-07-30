@@ -1,28 +1,22 @@
-from flask import Flask,request,jsonify
-import numpy as np
+from flask import Flask,jsonify,request
+import pandas as pd
 import pickle
+from flask.templating import render_template
 
 model = pickle.load(open('thyrocare.pkl','rb'))
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route("/")
 def index():
-    return "ThyroCare"
+    return render_template('form.html')
 
-@app.route('/predict',methods=['GET', 'POST'])
+@app.route("/predict/",methods=['GET'])
 def predict():
-    TSH = request.form.get('TSH')
-    T3 = request.form.get('T3')
-    TT4 = request.form.get('TT4')
-    T4U = request.form.get('T4U')
-    FTI = request.form.get('FTI')
-
-    input_query = np.array([[TSH, T3, TT4, T4U,FTI]])
-
-    result = model.predict(input_query)[0]
-
-    return jsonify({'classes':str(result)})
+    result=request.args
+    data=[[float(result["TSH"]),float(result["T3"]),float(result["TT4"]),float(result["T4U"]),float(result["FTI"])]]
+    prediction=model.predict(data)
+    return jsonify({'classes': int(prediction)})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
