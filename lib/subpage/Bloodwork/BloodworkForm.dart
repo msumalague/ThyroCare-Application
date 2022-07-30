@@ -100,7 +100,7 @@ class BottomContainer extends StatefulWidget {
 }
 
 class _BottomContainerState extends State<BottomContainer> {
-  late num TSH, T3, TT4, T4U, FTI;
+  double? TSH, T3, TT4, T4U, FTI;
   validform() {
     if (TSH != null &&
         T3 != null &&
