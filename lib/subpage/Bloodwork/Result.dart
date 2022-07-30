@@ -20,7 +20,7 @@ class _BloodworkFormState extends State<Result> {
   Future<void> predict() async {
     try {
       String url =
-          'https://https://thyrocarethesis.herokuapp.com/predict?TSH=${widget.TSH}&T3=${widget.T3}&TT4=${widget.TT4}&T4U=${widget.T4U}&FTI=${widget.FTI}';
+          'https://https://thyrocarethesis.herokuapp.com/predict/?TSH=${widget.TSH}&T3=${widget.T3}&TT4=${widget.TT4}&T4U=${widget.T4U}&FTI=${widget.FTI}';
       Response input_query = await get(Uri.parse(url));
       setState(() {
         result = jsonDecode(input_query.body)['classes'];
