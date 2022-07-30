@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template('form.html')
+    return "ThyroCare"
 
 @app.route("/predict/",methods=['GET'])
 def predict():
