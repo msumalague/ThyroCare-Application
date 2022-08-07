@@ -1,9 +1,17 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:thyroidclass/screen/components/TabButton.dart';
-import 'package:thyroidclass/subpage/Medicine/UI/MedicineReminder.dart';
-import '../../../subpage/Medicine/UI/MedicinePage.dart';
+import 'package:thyroidclass/subpage/Bloodwork/Bloodwork.dart';
+import 'package:thyroidclass/subpage/Bloodwork/BloodworkForm.dart';
 
-class HomeMedicine extends StatelessWidget {
+class HomeBloodTest extends StatefulWidget {
+  const HomeBloodTest({Key? key}) : super(key: key);
+
+  @override
+  _HomeBloodTestState createState() => _HomeBloodTestState();
+}
+
+class _HomeBloodTestState extends State<HomeBloodTest> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -16,14 +24,14 @@ class HomeMedicine extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                   Image.asset(
-                    "assets/images/icon_m.png",
-                    width: size.width * 0.35,
+                    "assets/images/HomeBloodTest.png",
+                    width: size.width * 0.4,
                   ),
                   SizedBox(
                     height: 5.0,
                   ),
                   Text(
-                    'Add your medications and supplements to receive smart reminders!',
+                    'Try our blood test feature to determine if you have thyroid disease',
                     style: TextStyle(
                         fontFamily: 'Urbanist',
                         fontSize: 16,
@@ -38,11 +46,11 @@ class HomeMedicine extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => MedicineReminder(),
+                              builder: (context) => BloodworkForm(),
                             ));
                       },
                       child: TabButton(
-                        buttonText: 'ADD MEDICINES',
+                        buttonText: 'BLOOD TEST',
                         press: () {},
                       )),
                 ]))));

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:thyroidclass/screen/UserProfile/ProfilePage.dart';
 import 'package:thyroidclass/screen/Login/LoginScreen.dart';
+import 'package:thyroidclass/screen/Navigation%20Bar/About%20Us.dart';
+import 'package:thyroidclass/screen/Navigation%20Bar/Policy.dart';
+import 'package:thyroidclass/screen/Navigation%20Bar/User%20Profile/pages/profile_page.dart';
 
 class NavBar extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
@@ -32,34 +34,27 @@ class NavBar extends StatelessWidget {
           ListTile(
               leading: Icon(Icons.person),
               title: Text('Profile'),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ProfilePage(),
-                    ));
-              }),
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProfilePage(),
+                  ))),
           ListTile(
-            leading: Icon(Icons.history),
-            title: Text('History'),
-            onTap: () => null,
-          ),
+              leading: Icon(Icons.info),
+              title: Text('About Us'),
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AboutUs(),
+                  ))),
           ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Notifications'),
-            onTap: () => null,
-          ),
-          Divider(),
-          ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Settings'),
-            onTap: () => null,
-          ),
-          ListTile(
-            leading: Icon(Icons.description),
-            title: Text('Policies'),
-            onTap: () => null,
-          ),
+              leading: Icon(Icons.description),
+              title: Text('Policy'),
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Policy(),
+                  ))),
           Divider(),
           ListTile(
             title: Text('Sign Out'),

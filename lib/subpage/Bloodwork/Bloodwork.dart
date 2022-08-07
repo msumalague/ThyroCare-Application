@@ -32,13 +32,13 @@ class Bloodwork extends StatelessWidget {
               margin: const EdgeInsets.only(left: 25, top: 25, right: 25),
               child: new Row(children: [
                 Icon(
-                  Icons.save,
+                  Icons.bloodtype_rounded,
                   color: Colors.teal,
                   size: 38,
                 ),
                 SizedBox(width: 10),
                 Text(
-                  'Save all blood test in one location for quick and \neasy access.',
+                  'Take blood test in one location for quick and \neasy access.',
                   style: TextStyle(
                       fontFamily: 'Urbanist',
                       fontSize: 14,
@@ -79,7 +79,7 @@ class Bloodwork extends StatelessWidget {
                       ));
                 },
                 child: TabButton(
-                  buttonText: 'ADD BLOODWORK',
+                  buttonText: 'TAKE BLOOD TEST',
                   press: () {},
                 )),
           ],

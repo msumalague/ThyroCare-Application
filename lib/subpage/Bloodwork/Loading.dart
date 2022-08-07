@@ -17,7 +17,7 @@ class _LoadingState extends State<Loading> {
           padding: EdgeInsets.all(10),
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/loading.jpg'),
+              image: AssetImage('assets/images/LoadingPage.jpg'),
               fit: BoxFit.fill,
             ),
           ),
@@ -27,19 +27,18 @@ class _LoadingState extends State<Loading> {
               SizedBox(
                 height: 100,
               ),
-              Text(
-                'Running Supervised Machine Learning Algorithm',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
+              Text('Finalizing the Result',
+                  style: TextStyle(
+                    color: Colors.black87,
                     fontSize: 35,
-                    color: Colors.white),
-              ),
+                    fontFamily: "Pacifico",
+                  ),
+                  textAlign: TextAlign.center),
               SizedBox(
                 height: 20,
               ),
               SpinKitHourGlass(
-                color: Colors.orangeAccent,
+                color: Color(0xFF1CC8A5),
                 size: 100,
               ),
             ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:thyroidclass/screen/Home/components/background.dart';
-import 'package:thyroidclass/screen/NavigationBar.dart';
+import 'package:thyroidclass/screen/Navigation%20Bar/NavigationBar.dart';
 import 'package:thyroidclass/subpage/Bloodwork/Bloodwork.dart';
 import 'package:thyroidclass/subpage/homepage/HomePage.dart';
 

@@ -3,7 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:thyroidclass/screen/components/TabButton.dart';
 import 'package:thyroidclass/subpage/Bloodwork/BloodworkForm.dart';
 import 'package:thyroidclass/subpage/homepage/HomeMedicine.dart';
-import 'package:thyroidclass/subpage/homepage/HomeUpdateWeight.dart';
+import 'package:thyroidclass/subpage/homepage/HomeBloodTest.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -73,7 +73,7 @@ class _HomePage extends State<HomePage> with TickerProviderStateMixin {
                           ),
                           Tab(
                             child: Text(
-                              "Update Weight",
+                              "Blood Test",
                               style: TextStyle(
                                   fontSize: 16,
                                   fontFamily: 'Urbanist',
@@ -87,7 +87,7 @@ class _HomePage extends State<HomePage> with TickerProviderStateMixin {
                             controller: this._tabController,
                             children: [
                               HomeMedicine(),
-                              HomeUpdateWeight(),
+                              HomeBloodTest(),
                             ]))
                   ])
             ]))));
