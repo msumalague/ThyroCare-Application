@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:thyroidclass/screen/components/TabButton.dart';
 import 'package:thyroidclass/subpage/Medicine/UI/MedicineReminder.dart';
-import '../../../subpage/Medicine/UI/MedicinePage.dart';
 
 class HomeMedicine extends StatelessWidget {
   @override

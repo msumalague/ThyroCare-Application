@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.thyroidclass">
    <application
-        android:label="thyroidclass"
+        android:label="ThyroCare"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -29,7 +29,7 @@ class _LoadingState extends State<Loading> {
               ),
               Text('Finalizing the Result',
                   style: TextStyle(
-                    color: Colors.black87,
+                    color: Color(0xFF1CC8A5),
                     fontSize: 35,
                     fontFamily: "Pacifico",
                   ),

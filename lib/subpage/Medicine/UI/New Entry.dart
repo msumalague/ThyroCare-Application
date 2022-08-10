@@ -10,7 +10,6 @@ import 'package:thyroidclass/subpage/Medicine/UI/new_entry_bloc.dart';
 import 'package:thyroidclass/subpage/Medicine/UI/SuccessScreen.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-
 import '../models/medicine_type.dart';
 
 class NewEntry extends StatefulWidget {
@@ -546,7 +545,7 @@ class MedicineTypeColumn extends StatelessWidget {
                 child: Icon(
                   IconData(iconValue, fontFamily: "Ic"),
                   size: 75,
-                  color: isSelected ? Colors.white : Color(0xFF1CC8A5),
+                  color: isSelected ? Colors.white : const Color(0xFF1CC8A5),
                 ),
               ),
             ),

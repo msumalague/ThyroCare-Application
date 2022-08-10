@@ -1,6 +1,11 @@
 import 'dart:async';
-
+import 'dart:io';
+import 'package:path/path.dart' as Path;
+import 'package:path_provider/path_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import '../user/user.dart';
 import '../widgets/display_image_widget.dart';
 import '../user/user_data.dart';
@@ -17,9 +22,35 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  File? _image;
+
   @override
   Widget build(BuildContext context) {
     final user = UserData.myUser;
+    Future getImage() async {
+      var image = await ImagePicker().pickImage(source: ImageSource.gallery);
+
+      setState(() {
+        _image = File(image!.path);
+        print('Image Path $_image');
+      });
+    }
+
+    Future uploadPic(BuildContext context) async {
+      String fileName = Path.basename(_image!.path);
+      FirebaseStorage storage = FirebaseStorage.instance;
+      Reference firebaseStorageRef =
+          FirebaseStorage.instance.ref().child(fileName);
+      UploadTask uploadTask = firebaseStorageRef.putFile(_image!);
+      uploadTask.then((res) {
+        res.ref.getDownloadURL();
+      });
+      setState(() {
+        print("Profile Picture uploaded");
+        Scaffold.of(context)
+            .showSnackBar(SnackBar(content: Text('Profile Picture Uploaded')));
+      });
+    }
 
     return Scaffold(
       body: Column(
@@ -47,14 +78,46 @@ class _ProfilePageState extends State<ProfilePage> {
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                       )))),
-          InkWell(
-              onTap: () {
-                navigateSecondPage(EditImagePage());
-              },
-              child: DisplayImage(
-                imagePath: user.image,
-                onPressed: () {},
-              )),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Align(
+                alignment: Alignment.center,
+                child: CircleAvatar(
+                  radius: 100,
+                  backgroundColor: Color(0xFF1CC8A5),
+                  child: ClipOval(
+                    child: new SizedBox(
+                      width: 180.0,
+                      height: 180.0,
+                      child: (_image != null)
+                          ? Image.file(
+                              _image!,
+                              fit: BoxFit.fill,
+                            )
+                          : Image.network(
+                              "https://images.unsplash.com/photo-1502164980785-f8aa41d53611?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+                              fit: BoxFit.fill,
+                            ),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 60.0),
+                child: IconButton(
+                  icon: Icon(
+                    Icons.camera_alt_outlined,
+                    size: 30.0,
+                    color: Color(0xFF1CC8A5),
+                  ),
+                  onPressed: () {
+                    getImage();
+                  },
+                ),
+              ),
+            ],
+          ),
           buildUserInfoDisplay(user.name, 'Name', EditNameFormPage()),
           buildUserInfoDisplay(user.phone, 'Phone', EditPhoneFormPage()),
           Expanded(

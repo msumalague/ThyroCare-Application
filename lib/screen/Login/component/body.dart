@@ -1,4 +1,3 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:thyroidclass/screen/ForgotPassword/ForgotPassword.dart';
 import 'package:thyroidclass/screen/Home/HomePage.dart';
@@ -41,7 +40,7 @@ class _BodyState extends State<Body> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                SizedBox(height: size.height * 0.30),
+                                SizedBox(height: size.height * 0.25),
                                 TextFormField(
                                   controller: emailController,
                                   decoration: InputDecoration(

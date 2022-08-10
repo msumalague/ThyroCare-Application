@@ -68,64 +68,64 @@ class AboutUs extends StatelessWidget {
                                 textAlign: TextAlign.justify),
                             //for images of team
                             Container(
-                                margin: const EdgeInsets.only(
-                                  top: 20,
-                                ),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: [
-                                    Expanded(
-                                      child: Column(
-                                        children: <Widget>[
-                                          Image.asset(
-                                            'assets/images/RomaG.jpg',
-                                          ),
-                                          Text(
-                                              'Roma Angelyn Garcia\nMachine Learning Programmer',
-                                              style: TextStyle(
-                                                color: Colors.black87,
-                                                fontSize: 12,
-                                                fontFamily: 'Urbanist',
-                                              ),
-                                              textAlign: TextAlign.center),
-                                        ],
-                                      ),
+                              margin: const EdgeInsets.only(
+                                top: 20,
+                              ),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Expanded(
+                                    child: Column(
+                                      children: <Widget>[
+                                        Image.asset(
+                                          'assets/images/RomaAG.jpg',
+                                        ),
+                                        Text(
+                                            'Roma Angelyn Garcia\nMachine Learning Programmer',
+                                            style: TextStyle(
+                                              color: Colors.black87,
+                                              fontSize: 12,
+                                              fontFamily: 'Urbanist',
+                                            ),
+                                            textAlign: TextAlign.center),
+                                      ],
                                     ),
-                                    Expanded(
-                                      child: Column(
-                                        children: <Widget>[
-                                          Image.asset(
-                                              'assets/images/Plata.png'),
-                                          Text(
-                                              'Mary Denly Plata\nProject\nResearcher',
-                                              style: TextStyle(
-                                                color: Colors.black87,
-                                                fontSize: 12,
-                                                fontFamily: 'Urbanist',
-                                              ),
-                                              textAlign: TextAlign.center),
-                                        ],
-                                      ),
+                                  ),
+                                  Expanded(
+                                    child: Column(
+                                      children: <Widget>[
+                                        Image.asset('assets/images/MDenly.jpg'),
+                                        Text(
+                                            'Mary Denly Plata\nProject\nResearcher',
+                                            style: TextStyle(
+                                              color: Colors.black87,
+                                              fontSize: 12,
+                                              fontFamily: 'Urbanist',
+                                            ),
+                                            textAlign: TextAlign.center),
+                                      ],
                                     ),
-                                    Expanded(
-                                      child: Column(
-                                        children: <Widget>[
-                                          Image.asset(
-                                              'assets/images/Formal Attire.png'),
-                                          Text(
-                                              'Mairene Sumalague\nFrontend and Backend Developer',
-                                              style: TextStyle(
-                                                color: Colors.black87,
-                                                fontSize: 12,
-                                                fontFamily: 'Urbanist',
-                                              ),
-                                              textAlign: TextAlign.center),
-                                        ],
-                                      ),
+                                  ),
+                                  Expanded(
+                                    child: Column(
+                                      children: <Widget>[
+                                        Image.asset(
+                                            'assets/images/Formal Attire.png'),
+                                        Text(
+                                            'Mairene Sumalague\nFrontend and Backend Developer',
+                                            style: TextStyle(
+                                              color: Colors.black87,
+                                              fontSize: 12,
+                                              fontFamily: 'Urbanist',
+                                            ),
+                                            textAlign: TextAlign.center),
+                                      ],
                                     ),
-                                  ],
-                                ))
+                                  ),
+                                ],
+                              ),
+                            ),
                           ]))
                         ])))));
   }

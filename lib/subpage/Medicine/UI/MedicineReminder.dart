@@ -220,7 +220,7 @@ class MedicineCard extends StatelessWidget {
       return Hero(
         tag: medicine.medicineName + medicine.medicineType,
         child: Icon(
-          IconData(0xe900, fontFamily: "Ic"),
+          const IconData(0xe900, fontFamily: "Ic"),
           color: Color(0xFF1CC8A5),
           size: size,
         ),
@@ -229,7 +229,7 @@ class MedicineCard extends StatelessWidget {
       return Hero(
         tag: medicine.medicineName + medicine.medicineType,
         child: Icon(
-          IconData(0xe901, fontFamily: "Ic"),
+          const IconData(0xe901, fontFamily: "Ic"),
           color: Color(0xFF1CC8A5),
           size: size,
         ),
@@ -238,7 +238,7 @@ class MedicineCard extends StatelessWidget {
       return Hero(
         tag: medicine.medicineName + medicine.medicineType,
         child: Icon(
-          IconData(0xe902, fontFamily: "Ic"),
+          const IconData(0xe902, fontFamily: "Ic"),
           color: Color(0xFF1CC8A5),
           size: size,
         ),
@@ -247,7 +247,7 @@ class MedicineCard extends StatelessWidget {
       return Hero(
         tag: medicine.medicineName + medicine.medicineType,
         child: Icon(
-          IconData(0xe903, fontFamily: "Ic"),
+          const IconData(0xe903, fontFamily: "Ic"),
           color: Color(0xFF1CC8A5),
           size: size,
         ),

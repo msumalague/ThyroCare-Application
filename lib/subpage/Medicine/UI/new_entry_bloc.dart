@@ -1,4 +1,3 @@
-import 'package:thyroidclass/subpage/Medicine/models/medicine.dart';
 import 'package:thyroidclass/subpage/Medicine/models/errors.dart';
 import 'package:rxdart/rxdart.dart';
 import '../models/medicine_type.dart';

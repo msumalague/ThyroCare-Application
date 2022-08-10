@@ -48,7 +48,7 @@ class _BodyState extends State<Body> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            SizedBox(height: size.height * 0.20),
+                            SizedBox(height: size.height * 0.25),
                             TextFormField(
                               controller: emailController,
                               decoration: InputDecoration(
@@ -143,7 +143,7 @@ class _BodyState extends State<Body> {
                               },
                               onChanged: (value) {},
                             ),
-                            SizedBox(height: size.height * 0.15),
+                            SizedBox(height: size.height * 0.10),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -179,7 +179,7 @@ class _BodyState extends State<Body> {
                                 )
                               ],
                             ),
-                            SizedBox(height: size.height * 0.10),
+                            SizedBox(height: size.height * 0.08),
                             Container(
                                 margin: EdgeInsets.fromLTRB(10, 0, 10, 70),
                                 child: Text.rich(TextSpan(children: [

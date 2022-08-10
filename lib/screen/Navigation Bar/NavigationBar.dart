@@ -31,14 +31,14 @@ class NavBar extends StatelessWidget {
                       fit: BoxFit.fill,
                       image: NetworkImage(
                           'https://i.ibb.co/2ddtVjp/NavBar.jpg')))),
-          ListTile(
-              leading: Icon(Icons.person),
-              title: Text('Profile'),
-              onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ProfilePage(),
-                  ))),
+          // ListTile(
+          //   leading: Icon(Icons.person),
+          //  title: Text('Profile'),
+          // onTap: () => Navigator.push(
+          //    context,
+          //    MaterialPageRoute(
+          //     builder: (context) => ProfilePage(),
+          //   ))),
           ListTile(
               leading: Icon(Icons.info),
               title: Text('About Us'),

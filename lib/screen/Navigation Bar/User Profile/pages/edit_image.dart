@@ -1,12 +1,9 @@
 import 'dart:io';
 import 'package:path_provider/path_provider.dart';
-
 import 'package:flutter/material.dart';
-
 import 'package:path/path.dart';
-
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:image_picker/image_picker.dart';
-
 import '../user/user_data.dart';
 import '../widgets/appbar_widget.dart';
 
@@ -19,9 +16,34 @@ class EditImagePage extends StatefulWidget {
 
 class _EditImagePageState extends State<EditImagePage> {
   var user = UserData.myUser;
+  late File _image;
 
   @override
   Widget build(BuildContext context) {
+    Future getImage() async {
+      var image = await ImagePicker().pickImage(source: ImageSource.gallery);
+
+      setState(() {
+        _image = File(image!.path);
+        print('Image Path $_image');
+      });
+    }
+
+    Future uploadPic(BuildContext context) async {
+      String fileName = basename(_image.path);
+      Reference firebaseStorageRef =
+          FirebaseStorage.instance.ref().child(fileName);
+      UploadTask uploadTask = firebaseStorageRef.putFile(_image);
+      uploadTask.then((res) {
+        res.ref.getDownloadURL();
+      });
+      setState(() {
+        print("Profile Picture uploaded");
+        Scaffold.of(context)
+            .showSnackBar(SnackBar(content: Text('Profile Picture Uploaded')));
+      });
+    }
+
     return Scaffold(
       appBar: buildAppBar(context),
       body: Column(

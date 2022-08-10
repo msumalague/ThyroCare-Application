@@ -1,8 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flare_flutter/flare_actor.dart';
-import 'package:thyroidclass/subpage/Medicine/UI/MedicineReminder.dart';
 
 class SuccessScreen extends StatefulWidget {
   @override

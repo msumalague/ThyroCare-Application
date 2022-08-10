@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
-import 'package:thyroidclass/subpage/Medicine/UI/MedicinePage.dart';
 import 'package:thyroidclass/subpage/Medicine/UI/MedicineReminder.dart';
 
 import '../global_bloc.dart';
@@ -193,7 +192,7 @@ class MainSection extends StatelessWidget {
       return Hero(
         tag: medicine.medicineName + medicine.medicineType,
         child: Icon(
-          IconData(0xe900, fontFamily: "Ic"),
+          const IconData(0xe900, fontFamily: "Ic"),
           color: Color(0xFF1CC8A5),
           size: size,
         ),
@@ -202,7 +201,7 @@ class MainSection extends StatelessWidget {
       return Hero(
         tag: medicine.medicineName + medicine.medicineType,
         child: Icon(
-          IconData(0xe901, fontFamily: "Ic"),
+          const IconData(0xe901, fontFamily: "Ic"),
           color: Color(0xFF1CC8A5),
           size: size,
         ),
@@ -211,7 +210,7 @@ class MainSection extends StatelessWidget {
       return Hero(
         tag: medicine.medicineName + medicine.medicineType,
         child: Icon(
-          IconData(0xe902, fontFamily: "Ic"),
+          const IconData(0xe902, fontFamily: "Ic"),
           color: Color(0xFF1CC8A5),
           size: size,
         ),
@@ -220,7 +219,7 @@ class MainSection extends StatelessWidget {
       return Hero(
         tag: medicine.medicineName + medicine.medicineType,
         child: Icon(
-          IconData(0xe903, fontFamily: "Ic"),
+          const IconData(0xe903, fontFamily: "Ic"),
           color: Color(0xFF1CC8A5),
           size: size,
         ),
