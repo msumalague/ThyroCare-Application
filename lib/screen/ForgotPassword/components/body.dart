@@ -42,7 +42,7 @@ class _BodyState extends State<Body> {
                             style: TextStyle(
                                 fontFamily: 'FredokaOne',
                                 fontSize: 30,
-                                fontWeight: FontWeight.bold,
+                                //fontWeight: FontWeight.bold,
                                 color: Colors.white),
                             textAlign: TextAlign.center,
                           ),
