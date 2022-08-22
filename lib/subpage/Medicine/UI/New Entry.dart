@@ -79,7 +79,7 @@ class _NewEntryState extends State<NewEntry> {
                 isRequired: true,
               ),
               TextFormField(
-                maxLength: 12,
+                maxLength: 20,
                 style: TextStyle(
                   fontSize: 16,
                 ),

@@ -18,9 +18,9 @@ class Background extends StatelessWidget {
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft,
                   colors: [
-                    Colors.teal.shade100, // fromARGB Decimal
-                    Colors.teal.shade200,
-                    Colors.teal.shade600,
+                    Colors.purple.shade50, // fromARGB Decimal
+                    Colors.purple.shade100,
+                    Colors.purple.shade200,
                   ],
                 )),
                 child: Stack(alignment: Alignment.center, children: <Widget>[

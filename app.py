@@ -1,9 +1,8 @@
 from flask import Flask,jsonify,request
 import pandas as pd
 import pickle
-from flask.templating import render_template
 
-model = pickle.load(open('thyrocare.pkl','rb'))
+model = pickle.load(open('FinalXGB.pkl','rb'))
 
 app = Flask(__name__)
 
