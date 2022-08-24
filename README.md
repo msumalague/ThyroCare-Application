@@ -1,6 +1,6 @@
 # thyroidclass
 
-ThyroCare: A Mobile Application Thyroid Diseases Classification Using Supervised Machine Learning Algorithms 
+A new Flutter project.
 
 ## Getting Started
 

@@ -3,4 +3,5 @@ numpy
 sklearn
 gunicorn
 pandas
+xgboost
 
