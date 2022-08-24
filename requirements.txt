@@ -1,6 +1,0 @@
-flask
-numpy
-sklearn
-gunicorn
-pandas
-
