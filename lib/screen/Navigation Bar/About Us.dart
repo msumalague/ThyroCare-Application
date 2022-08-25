@@ -40,7 +40,8 @@ class AboutUs extends StatelessWidget {
                             ),
                             SizedBox(height: size.height * 0.03),
                             Text(
-                                "   The ThyroCare app allows users to track, store, visualize, and assess their thyroid condition all in one convenient location. ThyroCare addresses major pain points users encounter when managing their thyroid health, providing them with peace of mind and the ability to live healthier and happier lives through key product features such as insights tracking, lab results logging, medication management and more.",
+                                "   The ThyroCare app allows users to visualize and assess their thyroid condition all in one convenient location. "
+                                "The ThyroCare mobile application addresses major pain points users encounter when managing their thyroid health through key product features such as blood test, medication management and medicine reminder.",
                                 style: TextStyle(
                                   color: Colors.black87,
                                   fontSize: 16,

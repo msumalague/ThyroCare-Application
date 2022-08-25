@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:thyroidclass/screen/Login/LoginScreen.dart';
 import 'package:thyroidclass/screen/Navigation%20Bar/About%20Us.dart';
+import 'package:thyroidclass/screen/Navigation%20Bar/Library/Library.dart';
 import 'package:thyroidclass/screen/Navigation%20Bar/Policy.dart';
 import 'package:thyroidclass/screen/Navigation%20Bar/User%20Profile/pages/profile_page.dart';
 
@@ -31,14 +32,14 @@ class NavBar extends StatelessWidget {
                       fit: BoxFit.fill,
                       image: NetworkImage(
                           'https://i.ibb.co/2ddtVjp/NavBar.jpg')))),
-          // ListTile(
-          //   leading: Icon(Icons.person),
-          //  title: Text('Profile'),
-          // onTap: () => Navigator.push(
-          //    context,
-          //    MaterialPageRoute(
-          //     builder: (context) => ProfilePage(),
-          //   ))),
+          ListTile(
+              leading: Icon(Icons.book),
+              title: Text('Library'),
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Library(),
+                  ))),
           ListTile(
               leading: Icon(Icons.info),
               title: Text('About Us'),
