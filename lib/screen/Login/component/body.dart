@@ -99,6 +99,9 @@ class _BodyState extends State<Body> {
                                     }
                                     if (!regex.hasMatch(value)) {
                                       return ("please enter valid password min. 6 character");
+                                    }
+                                    if (value != passwordController) {
+                                      return 'The passwords do not match';
                                     } else {
                                       return null;
                                     }
