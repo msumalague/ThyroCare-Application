@@ -207,11 +207,21 @@ class _BodyState extends State<Body> {
           ),
         );
       } on FirebaseAuthException catch (e) {
-        if (e.code == 'user-not-found') {
-          print('No user found for that email.');
-        } else if (e.code == 'wrong-password') {
-          print('Wrong password provided for that user.');
-        }
+        debugPrint("error is ${e.message}");
+
+        showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+                  title: const Text(
+                      "Invalid Username or password. Please register again or make sure that username and password is correct",
+                      style: TextStyle(
+                        color: Colors.teal,
+                        fontFamily: "Urbanist",
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.justify),
+                ));
       }
     }
   }
