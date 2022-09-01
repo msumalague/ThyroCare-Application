@@ -53,7 +53,7 @@ class TFT extends StatelessWidget {
                                     textAlign: TextAlign.justify),
                                 SizedBox(height: size.height * 0.03),
                                 Text(
-                                  "TSH (Thyroid Stimulating Hormone",
+                                  "TSH (Thyroid Stimulating Hormone)",
                                   style: TextStyle(
                                     color: Colors.black87,
                                     fontSize: 20,

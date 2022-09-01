@@ -131,7 +131,7 @@ class _BottomContainerState extends State<BottomContainer> {
                   TextField(
                     keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
-                        labelText: 'Enter the value of TSH',
+                        labelText: 'Enter the value of TSH (mu/L)',
                         border: OutlineInputBorder(),
                         errorBorder: OutlineInputBorder(
                             borderSide:
@@ -160,7 +160,7 @@ class _BottomContainerState extends State<BottomContainer> {
                   TextField(
                     keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
-                        labelText: 'Enter the value of T3',
+                        labelText: 'Enter the value of T3 (pmol/L)',
                         border: OutlineInputBorder(),
                         errorBorder: OutlineInputBorder(
                             borderSide:
@@ -189,7 +189,7 @@ class _BottomContainerState extends State<BottomContainer> {
                   TextField(
                     keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
-                        labelText: 'Enter the value of TT4',
+                        labelText: 'Enter the value of TT4 (nmol/L)',
                         border: OutlineInputBorder(),
                         errorBorder: OutlineInputBorder(
                             borderSide:
@@ -218,7 +218,7 @@ class _BottomContainerState extends State<BottomContainer> {
                   TextField(
                     keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
-                        labelText: 'Enter the value of T4U',
+                        labelText: 'Enter the value of T4U (nmol/L)',
                         border: OutlineInputBorder(),
                         errorBorder: OutlineInputBorder(
                             borderSide:
@@ -247,7 +247,7 @@ class _BottomContainerState extends State<BottomContainer> {
                   TextField(
                     keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
-                        labelText: 'Enter the value of FTI',
+                        labelText: 'Enter the value of FTI (μg/dL)',
                         border: OutlineInputBorder(),
                         errorBorder: OutlineInputBorder(
                             borderSide:
