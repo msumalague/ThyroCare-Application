@@ -11,7 +11,8 @@ hormones that regulate metabolism. A few distinct hormones produced by the thyro
 including T4 (thyroxine, which includes four iodide atoms), and T3 (triiodothyronine,
 contains three iodide atoms), regulate metabolism. Compared to men, women have a
 diagnosis of thyroid disease at a rate of five to eight times higher.
-Since machine learning algorithms play a significant role in classifying thyroid
+
+  Since machine learning algorithms play a significant role in classifying thyroid
 diseases, they are of great help with predicting and identifying many diseases, such as
 thyroid diseases. Deploying this machine learning algorithm into a mobile application
 surely helps those who are in question of their own health conditions and hopefully give
@@ -34,6 +35,7 @@ discover such thyroid disorders found in the body. The researchers will be colle
 from existing data sets available and with that information the researchers will train and
 create a model of the selected machine learning algorithm with the highest accuracy and
 performance that will be extracted and further developed in the mobile application.
+
   Although thyroid diseases come with a wide range form, this study focuses
 specifically on identifying the most common thyroid diseases which include
 hyperthyroidism and hypothyroidism. 
