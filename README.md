@@ -1,4 +1,4 @@
-# ThyroCare
+# ThyroCare: A Mobile Application Thyroid Disease Classification Using Supervised Machine Learning Algorithms
 
 ## Description
 
@@ -43,7 +43,8 @@ hyperthyroidism and hypothyroidism.
 ## Demo 
 
 
+https://user-images.githubusercontent.com/22261606/196327092-5bcb6fbe-b800-4c89-80c6-48e2d8a67517.mp4
 
-https://user-images.githubusercontent.com/22261606/196326890-1bd2c96a-1714-48c6-9497-e7b5e569b425.mp4
+
 
 
