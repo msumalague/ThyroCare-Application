@@ -1,4 +1,4 @@
-# ThyroCare: A Mobile Application Thyroid Disease Classification Using Supervised Machine Learning Algorithms
+# ThyroCare: A Mobile Application Thyroid Diseases Classification Using Supervised Machine Learning Algorithms
 
 ## Description
 
