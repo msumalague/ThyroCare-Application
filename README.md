@@ -42,9 +42,9 @@ hyperthyroidism and hypothyroidism.
 
 ## Screenshots
 
-<img src="https://user-images.githubusercontent.com/22261606/196328141-dd7796a9-9a7b-4eba-867a-9bd4c4580a37.jpg" width="100">
-![Register](https://user-images.githubusercontent.com/22261606/196328144-a4cf9253-c5c3-45fe-8d31-fd0eaeef6ce0.jpg)
-![Home](https://user-images.githubusercontent.com/22261606/196328146-76fe988e-f194-483a-8d52-a50b38df2948.jpg)
+<img src="https://user-images.githubusercontent.com/22261606/196328141-dd7796a9-9a7b-4eba-867a-9bd4c4580a37.jpg" width="250">
+<img src="https://user-images.githubusercontent.com/22261606/196328144-a4cf9253-c5c3-45fe-8d31-fd0eaeef6ce0.jpg" width="250">
+<img src="https://user-images.githubusercontent.com/22261606/196328146-76fe988e-f194-483a-8d52-a50b38df2948.jpg" width="250">
 
 
 ## Demo 
